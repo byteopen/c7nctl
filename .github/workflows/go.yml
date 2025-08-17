@@ -24,7 +24,7 @@ jobs:
       - name: Build Project
         run: | 
           pwd
-          go build -v -o bin/c7nctl .
+          go build -o bin/c7nctl .
           echo "🛠️ Build completed"
 
       - name: List Compiled Files
