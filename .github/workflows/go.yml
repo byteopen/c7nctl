@@ -23,7 +23,7 @@ jobs:
 
       - name: Build Project
         run: |
-          go build -v -o bin/c7nctl .  # 编译并指定输出目录[7](@ref)
+          go build # 编译并指定输出目录[7](@ref)
           echo "🛠️ Build completed"
 
       - name: List Compiled Files
