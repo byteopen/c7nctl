@@ -24,6 +24,7 @@ jobs:
       - name: Build Project
         run: | 
           pwd
+          ls -l
           go build -o bin/c7nctl .
           echo "🛠️ Build completed"
 
