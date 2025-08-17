@@ -17,7 +17,7 @@ const (
 	// Version c7nctl 版本号
 	Version = "2.0"
 	// OpenSourceResourceURL 默认的开源版和商业版资源获取路径
-	OpenSourceResourceURL      = "https://github.com/byteopen/"
+	OpenSourceResourceURL      = "https://gitee.com/byteopen/"
 	OpenSourceResourceBasePath = "c7nctl/raw/%s/manifests"
 	BusinessResourcePath       = "https://get.devops.hand-china.com/"
 	BusinessResourceBasePath   = "assets/biz/%s/%s?token=%v"
