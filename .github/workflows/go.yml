@@ -1,0 +1,36 @@
+name: Build and List Artifacts
+on:
+  push:
+    branches: [ main ]  # 主分支推送时触发
+  workflow_dispatch:   # 支持手动触发
+
+jobs:
+  build-and-list:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4 
+
+      - name: Set up Go
+        uses: actions/setup-go@v4 
+        with:
+          go-version: '1.22'     
+
+      - name: Install Dependencies
+        run: |
+          go get -v ./...        
+          echo "✅ Dependencies installed"
+
+      - name: Build Project
+        run: | 
+          pwd
+          go build -v -o bin/c7nctl .
+          echo "🛠️ Build completed"
+
+      - name: List Compiled Files
+        run: |
+          echo "📦 Compiled Artifacts:"
+          find bin/ -type f -exec ls -lh {} \; 
+          echo "---------------------------------"
+          echo "🗂️ Full directory structure:"
+          tree bin/ || ls -R bin/             
