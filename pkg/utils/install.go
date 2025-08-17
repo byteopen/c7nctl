@@ -18,7 +18,7 @@ const (
 	UpgradeConfigPath = "upgrade.yml"
 	// githubResourceUrl = "https://gitee.com/open-hand/c7nctl/raw/%s/manifests/%s"
 	githubResourceUrl = "https://raw.githubusercontent.com/yidaqiang/c7nctl/%s/manifests/%s"
-	giteeResourceUrl  = "https://gitee.com/open-hand/c7nctl/raw/%s/manifests/%s"
+	giteeResourceUrl  = "https://gitee.com/open-hand1/c7nctl/raw/%s/manifests/%s"
 	fileResourceUrl   = "https://file.choerodon.com.cn/choerodon-install/%s/%s"
 )
 
