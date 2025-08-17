@@ -25,7 +25,7 @@ jobs:
         run: | 
           pwd
           ls -l
-          CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o c7nctl.static         # go build -o bin/ ./cmd/c7nctl/...
+          CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o bin/ ./cmd/c7nctl/...
           echo "🛠️ Build completed"
 
       - name: List Compiled Files
