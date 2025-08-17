@@ -34,4 +34,12 @@ jobs:
           find bin/ -type f -exec ls -lh {} \; 
           echo "---------------------------------"
           echo "🗂️ Full directory structure:"
-          tree bin/ || ls -R bin/             
+          tree bin/ || ls -R bin/      
+          
+      - name: Upload to Release
+        uses: softprops/action-gh-release@v2  # 通用上传工具[6](@ref)
+        with:
+          files: bin/c7nctl              # 指定上传文件路径
+          tag_name: ${{ github.ref_name }} # 当前 Release 标签[6](@ref)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
